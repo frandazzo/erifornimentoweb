@@ -1,0 +1,63 @@
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <button id="sidebarToggler" sidebar-toggler type="button" data-toggle="collapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <a id="navbar-brand" class="navbar-brand" href="#">
+
+           <img class="brand" src="./app/assets/images/logo_white_orizzontale_500px_long.png"   alt="Atomic Fitness">
+
+        </a>
+        <button id="navbarContentToggler" navbar-content-toggler class="navbar-toggler" type="button">
+            <span class="fa fa-ellipsis-v"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a id="logout-toggler" logout-toggler class="nav-link dropdown-toggle" href="#"  role="button">
+                      username....
+                    </a>
+                    <div id="logout" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#" ng-click="logout()">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="sidebar align-items-stretch" sidebar>
+
+           
+
+            <div ng-if="currentUser.role == 'ADMIN'" class="list-group">
+                
+                <a href="#!/utenti" ng-class="
+                        ['list-group-item', 'list-group-item-action', 'sidebar-item',
+                        {active: activeTab=='utenti'}]">
+                    Utenti
+                </a>
+                <a href="#!/configurazione" ng-class="
+                    ['list-group-item', 'list-group-item-action', 'sidebar-item',
+                    {active: activeTab=='configurazione'}]">Configura server
+                </a>
+                
+            </div>
+
+
+             <div ng-if="currentUser.role == 'USER'" class="list-group">
+                <a href="#" class="list-group-item list-group-item-action sidebar-item">Ciaoooo
+                </a>
+                
+            </div>
+
+
+
+        </div>
+        <div class="content align-items-stretch">
+                 <ng-view>
+
+    			</ng-view>
+        </div>
+    </div> 
+   
+
+

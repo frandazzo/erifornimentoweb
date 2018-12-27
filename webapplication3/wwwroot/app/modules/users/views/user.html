@@ -1,0 +1,63 @@
+<bread-crumb>
+    <a href="#!/utenti"> Ricerca utenti /</a>
+    <label> {{user.name}} /</label>
+</bread-crumb>
+<a ng-href="#!/newcontract/{{user.id}}" class="btn btn-primary btn-atom btn-add">
+            <icon class="fa fa-plus"></icon>
+        </a>
+<div class="card">
+    <h4 class="card-header panel-title">Anagrafica utente</h4>
+    <div class="card-body">
+        <div class="row">
+
+			<dl class="row">
+			    <dt class="col-sm-3">{{user.name}} </dt>
+			    <dd class="col-sm-9"></dd>
+			    <dd class="col-sm-3">Ruolo:</dd>
+			    <dd class="col-sm-9">{{user.role}} </dd>
+			    <dd class="col-sm-3">Mail (username):</dd>
+			    <dd class="col-sm-9">{{user.mail}} </dd>
+			     <dd class="col-sm-3">Stato utente:</dd>
+			    <dd class="col-sm-9"><icon ng-show="user.active === true" class="fa fa-check"></icon></dd>
+
+
+                
+			</dl>
+
+            <br><br>
+	    </div>	
+		<div class="row">
+			<a ng-href="#!/updateuser/{{user.id}}" class="btn btn-primary btn-main-atom">Modifica</a>
+		</div>
+		
+
+
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div ng-show="modal">
+    <div class="modal-backdrop fade show" ></div>
+    <div style="display:block" class="modal  fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Domanda</h5>
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+                </div>
+                <div class="modal-body">
+                    Sicuro di voler eliminare il contratto?
+                </div>
+                <div class="modal-footer">
+                    <button ng-click="delete()" type="button" class="btn btn-primary btn-main-atom">Elimina</button>
+                    <button ng-click="cancelDelete()" type="button" class="btn btn-secondary btn-atom" data-dismiss="modal">Annulla</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

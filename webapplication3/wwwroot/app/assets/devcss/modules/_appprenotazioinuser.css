@@ -1,0 +1,153 @@
+.user-day-selector{
+	background-color: #f8f9fa;
+	height: 100px; position:relative; margin:2px 0px;
+	transition: all 0.4s;
+
+	.chevron-container{
+		position:absolute; right:10px; top:50%; transform: translate(-50%, -50%);
+
+		.chevron{
+			font-size: 120%; opacity: 0.8
+		}
+
+		.booked{
+			font-size: 120%; 
+			transition: all 0.4s;
+			display: inline-block;
+    		
+		}
+		.booked:before {
+		    font-size: 150%;
+		        margin-left: 0px
+		   
+		}
+
+
+
+	}
+
+
+	.statistics{
+		position:absolute; left:50%; top:55%; transform: translate(-50%, -50%);
+		z-index: 1000; opacity:0.8;
+	}
+
+	.day-info{
+		position:absolute; top:10px; left: 10px;    z-index: 1000;
+	}
+
+	
+
+	
+	.closedday-info{
+		position:absolute; bottom:10px; left: 10px;    z-index: 1000;
+		font-size: 90%!important;
+    	font-weight: 800!important;
+	}
+
+	.booking-day-info{
+		position:absolute; bottom:10px; left: 10px;    z-index: 1000;
+		font-size: 90%!important;
+    	font-weight: 400!important;
+	}
+
+
+	
+
+	.availability-info{
+		position:absolute; bottom:10px; left: 10px;    z-index: 1000;
+		font-size: 90%!important;
+    	font-weight: 400!important;
+	}
+
+
+	
+
+	.week-selector{
+		margin: 10px 0px;
+	}
+
+	.day-selector{
+		margin: 10px 0px;
+	}
+
+
+}
+
+.booked-info{
+		position:absolute; bottom: -28px; left: 35px;    z-index: 1000;
+	      
+	    transform: translate(-50%, -30%);
+		/*font-size: 90%!important;
+    	font-weight: 400!important;*/
+
+
+	.booked-in-the-past{
+		color: $mainColor;
+	}
+	.booked-in-the-past:before {
+			    font-size: 250%;
+
+			   
+	}
+}
+
+.booked-cancel{
+	width: 68px;
+    height: 74px;
+}
+
+
+
+.user-closed-day{
+	background-color: #e9ecef!important;
+	
+}
+
+
+.user-day-selector:hover{
+		background-color: $mainColorDark; 
+
+		
+	}
+
+	.user-day-selector-nohover:hover{
+		background-color: #f8f9fa;	
+
+		/*.booked{
+				color: $mainColorDark;
+			}
+
+		.booked:before {
+		    font-size: 150%;
+		   
+		}	*/
+	}
+
+/*.user-closed-day:hover{
+	.chevron-container{
+		.booked{
+			font-size: 120%; 
+			color: #000;
+			transition: all 0.4s;
+		}
+		.booked:before {
+		    font-size: 120%;
+		}
+	}
+}*/
+
+
+@media (max-width: 576px) {
+	  .user-day-selector{
+		  	.chevron-container{
+				position:absolute; right:10px; top:50%; transform: translate(0, -50%);
+
+			}
+		}
+
+		.booked-info{
+			position:absolute; top:50%; left: 50%;  
+	    	
+		}
+}

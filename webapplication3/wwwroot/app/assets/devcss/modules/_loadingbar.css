@@ -1,0 +1,21 @@
+#loading-bar .bar {
+
+
+  background: #ff3300;
+
+  height: 4px;
+
+}
+
+#loading-bar .peg {
+
+  box-shadow: #ff3300 1px 0 6px 1px;
+  
+}
+
+#loading-bar-spinner .spinner-icon {
+
+  border-top-color:  #ff3300;
+  border-left-color: #ff3300;
+
+}

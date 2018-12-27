@@ -1,0 +1,23 @@
+<bread-crumb>	
+	<!-- <a href="#!/prenotazioni" > Orari /</a> -->
+</bread-crumb>
+
+
+<div class="card">
+  <h4 class="card-header">Benvenuto {{currentUser.name}}</h4>
+
+	  <div ng-if="currentUser.role == 'ADMIN'" class="card-body">
+	    <h5 class="card-title">Buongiorno amministratore!!!</h5>
+	    <p class="card-text">Crea le utenze per l'accesso a eRifornimento con la tua app</p>
+	    <a href="#!/utenti" class="btn btn-primary btn-atom">Vai</a>
+	  </div>
+
+
+	  <div ng-if="currentUser.role == 'USER'" class="card-body">
+	    <h5 class="card-title">Buongiorno</h5>
+	  </div>
+
+
+</div>
+               
+    

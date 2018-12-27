@@ -1,0 +1,15 @@
+.input-error{
+	
+}
+
+/*input.ng-invalid{
+	border-color: red;
+}*/
+
+.form-group.invalid input{
+	border-color: red;
+}
+
+.form-group.invalid small{
+	color: red;
+}

@@ -1,0 +1,176 @@
+$backgroundColor : #fff;
+$fontColor : #555;
+$fontSize:  20px;
+$fontWeight : 300;
+$mainColor : #03a9f4;
+$mainColorDark : #036ff4;
+$mainColorLight : #03c8f4;
+
+$secondaryColor : #bf360c;
+$secondaryColorDark : #870000;
+$secondaryColorLight : #f9683a;
+
+
+$mainColorText: #000;
+
+/**{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}*/
+
+section{
+	padding: 80px 0;
+}
+
+html{
+	background-color: $backgroundColor;
+	color: $fontColor;
+	font-family: 'Lato', 'Arial', sans-serif;
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	text-rendering: optimizeLegibility;
+	height: 100%;
+
+}
+
+body{
+	height: 100%;
+/*	background-color: $mainColor;*/
+}
+
+/* scrollbar */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.13);
+  background-color: rgba(85, 85, 85, 0.27);
+}
+
+
+
+.wrapper{
+		display: flex;
+		align-items: stretch;
+		
+		height: calc(100% - 92.5px);
+	}
+
+
+	.sidebar{
+		flex: 0 0 250px;
+		transition: all 0.3s;
+		background-color: $mainColor;
+		overflow-y: auto;
+		.sidebar-item{
+			border-width:  0px;
+			background-color: $mainColor;
+			transition: all 0.4s;
+			color: $mainColorText;
+		}
+
+		.sidebar-item.active{
+			
+			background-color: $mainColorLight;
+			
+			
+		}
+
+		.sidebar-item:hover{
+			
+			background-color: $mainColorDark;
+			
+			
+		}
+	}
+
+	.content{
+		flex-grow: 1;
+		flex-shrink: 1;
+		padding: 5px;
+		height: 100%;
+		overflow: auto;
+		/*background-color: #fff;*/
+	}
+
+	.inactive{
+		margin-left: -250px;
+	}
+
+	.brand{
+		width: 250px;
+		height: auto;
+	}
+
+	#sidebarToggler{
+		color: rgba(255,255,255,.5);
+ 
+    	padding: .25rem .75rem;
+	    font-size: 1.25rem;
+	    line-height: 1;
+	    background: 0 0;
+	    border: 1px solid  rgba(255,255,255,.1);
+	    border-radius: .25rem;
+	}
+
+
+	#logout-toggler{
+		margin-right: 20px;
+		
+	}
+	#logout{
+		left: -110px;
+	}
+
+	@media (max-width: 576px) {
+	  
+	  .sidebar{
+	      margin-left: -250px;
+
+	    }
+
+	   .inactive{
+	      margin-left: 0px;
+	    }
+
+	    .brand{
+			width: 150px;
+	    }
+	}
+
+
+	@media (max-width: 992px) { 
+
+		#navbarSupportedContent{
+			text-align: right;
+			padding-right: 8px;
+		}
+	}
+
+
+	@media (min-width: 992px) { 
+
+		#sidebarToggler{
+			order: 2;
+		}
+
+		#navbar-brand{
+			order: 1;
+		}
+
+
+		#navbarSupportedContent{
+			order: 3;
+		}
+	}
+
+
+	

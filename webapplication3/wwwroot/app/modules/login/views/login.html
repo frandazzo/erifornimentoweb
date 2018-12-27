@@ -1,0 +1,13 @@
+ <div class="login-page">
+    <div class="login-logo">
+      <img src="app/assets/images/logo_black_orizzontale_500px_long.png" alt="" >
+    </div>
+    <div class="form">
+        <form class="login-form">
+            <input type="text" placeholder="username" ng-model="username"/>
+            <input type="password" placeholder="password" ng-model="password"/>
+            <button ng-click=login()>Login</button>
+            <p class="error-message">{{error}}</p>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root Type="DevExpress.CodeRush.Foundation.Navigation.QuickFileNav.SolutionFileInfosContainer">
+  <Options Language="Neutral">
+    <Items>
+      <Item Id="{3a3c69d2-f66c-4a6a-86f3-dc154f40c78e}">
+        <Filename>UserDTO.cs</Filename>
+        <FilePath>c:\users\fgran\source\repos\webapplication3\webapplication3\models\userdto.cs</FilePath>
+        <Folders>
+          <Item>Models</Item>
+        </Folders>
+        <ProjectFileName>C:\Users\fgran\source\repos\WebApplication3\WebApplication3\WebApplication3.csproj</ProjectFileName>
+        <ProjectName>WebApplication3</ProjectName>
+      </Item>
+      <Item Id="{2f33c6aa-9b73-4012-b876-e1dd6906a54f}">
+        <Filename>User.cs</Filename>
+        <FilePath>c:\users\fgran\source\repos\webapplication3\webapplication3\domain\security\user.cs</FilePath>
+        <Folders>
+          <Item>Domain</Item>
+          <Item>Security</Item>
+        </Folders>
+        <ProjectFileName>C:\Users\fgran\source\repos\WebApplication3\WebApplication3\WebApplication3.csproj</ProjectFileName>
+        <ProjectName>WebApplication3</ProjectName>
+      </Item>
+    </Items>
+  </Options>
+</Root>

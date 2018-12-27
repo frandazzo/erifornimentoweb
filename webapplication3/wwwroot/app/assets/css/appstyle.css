@@ -1,0 +1,492 @@
+/**{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}*/
+section{
+	padding: 80px 0;
+}
+html{
+	background-color: #fff;
+	color: #555;
+	font-family: 'Lato', 'Arial', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+	height: 100%;
+
+}
+body{
+	height: 100%;
+/*	background-color: $mainColor;*/
+}
+/* scrollbar */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.13);
+  background-color: rgba(85, 85, 85, 0.27);
+}
+.wrapper{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: stretch;
+		    -ms-flex-align: stretch;
+		        align-items: stretch;
+		
+		height: calc(100% - 92.5px);
+	}
+.sidebar{
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 0 250px;
+		        flex: 0 0 250px;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+		background-color: #03a9f4;
+		overflow-y: auto;
+	}
+.sidebar .sidebar-item{
+			border-width:  0px;
+			background-color: #03a9f4;
+			-webkit-transition: all 0.4s;
+			transition: all 0.4s;
+			color: #868e96;
+		}
+.sidebar .sidebar-item.active{
+			
+			background-color: #03c8f4;
+			
+			
+		}
+.sidebar .sidebar-item:hover{
+			
+			background-color: #036ff4;
+			
+			
+		}
+.content{
+		-webkit-box-flex: 1;
+		    -ms-flex-positive: 1;
+		        flex-grow: 1;
+		-ms-flex-negative: 1;
+		    flex-shrink: 1;
+		padding: 5px;
+		height: 100%;
+		overflow: auto;
+		/*background-color: #fff;*/
+	}
+.inactive{
+		margin-left: -250px;
+	}
+.brand{
+		width: 250px;
+		height: auto;
+	}
+#sidebarToggler{
+		color: rgba(255,255,255,.5);
+ 
+    	padding: .25rem .75rem;
+	    font-size: 1.25rem;
+	    line-height: 1;
+	    background: 0 0;
+	    border: 1px solid  rgba(255,255,255,.1);
+	    border-radius: .25rem;
+	}
+#logout-toggler{
+		margin-right: 20px;
+		
+	}
+#logout{
+		left: -110px;
+	}
+@media (max-width: 576px) {
+	  
+	  .sidebar{
+	      margin-left: -250px;
+
+	    }
+
+	   .inactive{
+	      margin-left: 0px;
+	    }
+
+	    .brand{
+			width: 150px;
+	    }
+	}
+@media (max-width: 992px) { 
+
+		#navbarSupportedContent{
+			text-align: right;
+			padding-right: 8px;
+		}
+	}
+@media (min-width: 992px) { 
+
+		#sidebarToggler{
+			-webkit-box-ordinal-group: 3;
+			    -ms-flex-order: 2;
+			        order: 2;
+		}
+
+		#navbar-brand{
+			-webkit-box-ordinal-group: 2;
+			    -ms-flex-order: 1;
+			        order: 1;
+		}
+
+
+		#navbarSupportedContent{
+			-webkit-box-ordinal-group: 4;
+			    -ms-flex-order: 3;
+			        order: 3;
+		}
+	}
+.login-page {
+  width: 340px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #03a9f4;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #000;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #036ff4;
+}
+.login-logo{
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+.login-logo img{
+    width: 300px;
+    height: auto;
+  }
+.form .error-message {
+  margin: 16px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.red{
+	color:red;
+}
+.fonts{
+	font-style: italic;
+}
+.breadcrumb a{
+		display: inline-block;
+		
+		margin-left: 3px;
+		margin-right: 3px;
+		
+		text-decoration: none;
+		opacity: 0.75;
+	}
+.breadcrumb a.home{
+		color: #212529;
+		opacity: 0.75;
+
+	}
+.breadcrumb label{
+		
+	}
+#toast-container{
+	margin-right: 14px; 
+
+}
+/*@import "modules/_loadingbar.css";*/
+.btn-atom{
+	background-color:#bf360c;
+	border-color: #bf360c;
+	color:#fff;
+}
+.btn-atom:hover{
+	background-color:#870000;
+	border-color: #870000;
+}
+.btn-add{
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	position:fixed;
+	bottom: 20px;
+	right: 35px;
+	font-size: 110%;
+	z-index:1040;
+}
+.btn-main-atom{
+	background-color:#03a9f4;
+	border-color: #03a9f4;
+	color:rgba(0,0,0,0.7);
+}
+.btn-main-atom:hover{
+	background-color:#036ff4;
+	border-color: #036ff4;
+	color:rgba(0,0,0,0.7);
+}
+.panel-title{
+	background-color: #e9ecef;
+}
+.admin-day-selector{
+	background-color: #f8f9fa;
+	height: 100px; position:relative; margin:2px 0px;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+
+	
+
+}
+.admin-day-selector .chevron-container{
+		position:absolute; right:10px; top:50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);
+
+
+
+	}
+.admin-day-selector .chevron-container .chevron{
+			font-size: 120%; opacity: 0.8
+		}
+.admin-day-selector .chevron-container .booked{
+			font-size: 120%; 
+			-webkit-transition: all 0.4s; 
+			transition: all 0.4s;
+		}
+.admin-day-selector .chevron-container .booked:before {
+		    font-size: 120%;
+		   
+		}
+.admin-day-selector .statistics{
+		position:absolute; left:50%; top:55%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);
+		z-index: 1000; opacity:0.8;
+	}
+.admin-day-selector .day-info{
+		position:absolute; top:10px; left: 10px;    z-index: 1000;
+	}
+.admin-day-selector .admin-progress{
+		background-color:#03c8f4; opacity: 0.5;
+	}
+.admin-day-selector .admin-progress-minimum{
+		background-color:#f9683a;
+	}
+.admin-day-selector .admin-progress-maximum{
+		background-color:#036ff4; 
+	}
+.admin-day-selector .closedday-info{
+		position:absolute; bottom:10px; left: 10px;    z-index: 1000;
+		font-size: 90%!important;
+    	font-weight: 800!important;
+	}
+.admin-day-selector .booking-day-info{
+		position:absolute; bottom:10px; left: 10px;    z-index: 1000;
+		font-size: 90%!important;
+    	font-weight: 400!important;
+	}
+.admin-day-selector .availability-info{
+		position:absolute; bottom:10px; left: 10px;    z-index: 1000;
+		font-size: 90%!important;
+    	font-weight: 400!important;
+	}
+.admin-day-selector .week-selector{
+		margin: 10px 0px;
+	}
+.admin-day-selector .day-selector{
+		margin: 10px 0px;
+	}
+.admin-closed-day{
+		background-color: #e9ecef!important;
+		
+	}
+.admin-day-selector:hover{
+	background-color: #036ff4;
+}
+.admin-day-selector:hover .booked{
+			color: #fff;
+		}
+.admin-day-selector:hover .booked:before {
+	    font-size: 160%;
+	   
+	}
+.admin-closed-day:hover .chevron-container .booked{
+			font-size: 120%; 
+			color: #000;
+			-webkit-transition: all 0.4s;
+			transition: all 0.4s;
+		}
+.admin-closed-day:hover .chevron-container .booked:before {
+		    font-size: 120%;
+		}
+.input-error{
+	
+}
+/*input.ng-invalid{
+	border-color: red;
+}*/
+.form-group.invalid input{
+	border-color: red;
+}
+.form-group.invalid small{
+	color: red;
+}
+.user-day-selector{
+	background-color: #f8f9fa;
+	height: 100px; position:relative; margin:2px 0px;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+
+
+}
+.user-day-selector .chevron-container{
+		position:absolute; right:10px; top:50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);
+
+
+
+	}
+.user-day-selector .chevron-container .chevron{
+			font-size: 120%; opacity: 0.8
+		}
+.user-day-selector .chevron-container .booked{
+			font-size: 120%; 
+			-webkit-transition: all 0.4s; 
+			transition: all 0.4s;
+			display: inline-block;
+    		
+		}
+.user-day-selector .chevron-container .booked:before {
+		    font-size: 150%;
+		        margin-left: 0px
+		   
+		}
+.user-day-selector .statistics{
+		position:absolute; left:50%; top:55%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);
+		z-index: 1000; opacity:0.8;
+	}
+.user-day-selector .day-info{
+		position:absolute; top:10px; left: 10px;    z-index: 1000;
+	}
+.user-day-selector .closedday-info{
+		position:absolute; bottom:10px; left: 10px;    z-index: 1000;
+		font-size: 90%!important;
+    	font-weight: 800!important;
+	}
+.user-day-selector .booking-day-info{
+		position:absolute; bottom:10px; left: 10px;    z-index: 1000;
+		font-size: 90%!important;
+    	font-weight: 400!important;
+	}
+.user-day-selector .availability-info{
+		position:absolute; bottom:10px; left: 10px;    z-index: 1000;
+		font-size: 90%!important;
+    	font-weight: 400!important;
+	}
+.user-day-selector .week-selector{
+		margin: 10px 0px;
+	}
+.user-day-selector .day-selector{
+		margin: 10px 0px;
+	}
+.booked-info{
+		position:absolute; bottom: -28px; left: 35px;    z-index: 1000;
+	      
+	    -webkit-transform: translate(-50%, -30%);
+	      
+	            transform: translate(-50%, -30%);
+}
+/*font-size: 90%!important;
+    	font-weight: 400!important;*/
+.booked-info .booked-in-the-past{
+		color: #03a9f4;
+	}
+.booked-info .booked-in-the-past:before {
+			    font-size: 250%;
+
+			   
+	}
+.booked-cancel{
+	width: 68px;
+    height: 74px;
+}
+.user-closed-day{
+	background-color: #e9ecef!important;
+	
+}
+.user-day-selector:hover{
+		background-color: #036ff4; 
+
+		
+	}
+.user-day-selector-nohover:hover{
+		background-color: #f8f9fa;	
+
+		/*.booked{
+				color: $mainColorDark;
+			}
+
+		.booked:before {
+		    font-size: 150%;
+		   
+		}	*/
+	}
+/*.user-closed-day:hover{
+	.chevron-container{
+		.booked{
+			font-size: 120%; 
+			color: #000;
+			transition: all 0.4s;
+		}
+		.booked:before {
+		    font-size: 120%;
+		}
+	}
+}*/
+@media (max-width: 576px) {
+		  	.user-day-selector .chevron-container{
+				position:absolute; right:10px; top:50%; -webkit-transform: translate(0, -50%); transform: translate(0, -50%);
+
+			}
+
+		.booked-info{
+			position:absolute; top:50%; left: 50%;  
+	    	
+		}
+}

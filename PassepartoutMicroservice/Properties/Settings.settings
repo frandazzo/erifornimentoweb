@@ -1,0 +1,57 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PassepartoutMicroservice.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Porta" Type="System.String" Scope="User">
+      <Value Profile="(Default)">9000</Value>
+    </Setting>
+    <Setting Name="Indirizzo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.50</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FATTEL:FATTEL</Value>
+    </Setting>
+    <Setting Name="LoginMexal" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PasswordMexal" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Terminale" Type="System.String" Scope="User">
+      <Value Profile="(Default)">T0</Value>
+    </Setting>
+    <Setting Name="Azienda" Type="System.String" Scope="User">
+      <Value Profile="(Default)">IMP</Value>
+    </Setting>
+    <Setting Name="PortaServizio" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8081</Value>
+    </Setting>
+    <Setting Name="MastrinoCliente" Type="System.String" Scope="User">
+      <Value Profile="(Default)">501</Value>
+    </Setting>
+    <Setting Name="ListinoCliente" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="ValutaCliente" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="SiglaDocumento" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CO</Value>
+    </Setting>
+    <Setting Name="SerieDocumento" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="MagazzinoDocumento" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="CausaleDocumento" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="PagamentoContanti" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="PagamentoCarta" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

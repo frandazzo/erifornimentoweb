@@ -1,0 +1,51 @@
+<bread-crumb>
+   <a href="#!/configurazione" > Configura server /</a>
+   
+   <label >Aggiorna /</label>
+</bread-crumb>
+
+<div class="card">
+    <h4 class="card-header panel-title">Aggiorna configurazione server</h4>
+    <div class="card-body">
+        <form name="formUsers" novalidate>
+				<input type="hidden" ng-model="configurazione.id">
+
+			    <div ng-class="['form-group', {invalid : formUsers.$dirty && formUsers.benzina.$invalid}]">	
+			        <label for="benzina">Codice articolo benzina</label>
+                	<input name="benzina" required  ng-model="configurazione.benzina" type="text" class="form-control" id="benzina" placeholder="Codice articolo benzina" value="XXXXX">
+                	<small ng-show="formUsers.$dirty && formUsers.benzina.$invalid" class="form-text">Campo obbligatorio</small>
+			    </div>
+
+
+			    <div ng-class="['form-group', {invalid : formUsers.$dirty && formUsers.diesel.$invalid}]">	
+			        <label for="diesel">Codice articolo diesel</label>
+                	<input name="diesel" required  ng-model="configurazione.diesel" type="text" class="form-control" id="diesel" placeholder="Codice articolo diesel" value="XXXXX">
+                	<small ng-show="formUsers.$dirty && formUsers.diesel.$invalid" class="form-text">Campo obbligatorio</small>
+			    </div>
+
+			    <div ng-class="['form-group', {invalid : formUsers.$dirty && formUsers.gpl.$invalid}]">	
+			        <label for="gpl">Codice articolo gpl</label>
+                	<input name="gpl" required  ng-model="configurazione.gpl" type="text" class="form-control" id="gpl" placeholder="Codice articolo gpl" value="XXXXX">
+                	<small ng-show="formUsers.$dirty && formUsers.gpl.$invalid" class="form-text">Campo obbligatorio</small>
+			    </div>
+
+
+			    <div ng-class="['form-group', {invalid : formUsers.$dirty && formUsers.metano.$invalid}]">	
+			        <label for="metano">Codice articolo metano</label>
+                	<input name="metano" required  ng-model="configurazione.metano" type="text" class="form-control" id="metano" placeholder="Codice articolo metano" value="XXXXX">
+                	<small ng-show="formUsers.$dirty && formUsers.metano.$invalid" class="form-text">Campo obbligatorio</small>
+			    </div>
+
+
+			    <div ng-class="['form-group', {invalid : formUsers.$dirty && formUsers.gestionale.$invalid}]">	
+			        <label for="gestionale">Stringa connessione gestionale</label>
+                	<input name="gestionale" required  ng-model="configurazione.gestionale" type="text" class="form-control" id="gestionale" placeholder="Stringa connessione gestionale" value="XXXXX">
+                	<small ng-show="formUsers.$dirty && formUsers.gestionale.$invalid" class="form-text">Campo obbligatorio</small>
+			    </div>
+			    
+			
+            <button type="submit" ng-click="formUsers.$setDirty(); formUsers.$valid && update()" class="btn btn-primary btn-main-atom">Salva</button>
+            <a ng-href="#!/" class="btn btn-primary btn-atom">Annulla</a>
+        </form>
+    </div>
+</div>

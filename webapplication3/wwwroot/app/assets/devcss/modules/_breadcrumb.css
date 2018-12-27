@@ -1,0 +1,23 @@
+.breadcrumb{
+
+	
+	a{
+		display: inline-block;
+		
+		margin-left: 3px;
+		margin-right: 3px;
+		
+		text-decoration: none;
+		opacity: 0.75;
+	}
+
+	a.home{
+		color: #212529;
+		opacity: 0.75;
+
+	}
+
+	label{
+		
+	}
+}

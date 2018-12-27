@@ -1,0 +1,23 @@
+{
+  "name": "erifornimentoweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francesco Randazzo",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.8.4",
+	"autoprefixer": "^7.1.6",
+  "gulp": "^3.9.1",
+   "postcss-import": "^11.0.0",
+   "postcss-nested": "^2.1.2",
+    "postcss-simple-vars": "^4.1.0",
+     "gulp-watch": "^4.3.11",
+      "gulp-postcss": "^7.0.0",
+      "browser-sync": "^2.18.13"
+   
+  }
+}

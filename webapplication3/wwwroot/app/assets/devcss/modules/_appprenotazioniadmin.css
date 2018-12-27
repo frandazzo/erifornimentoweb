@@ -1,0 +1,114 @@
+
+
+
+
+.admin-day-selector{
+	background-color: #f8f9fa;
+	height: 100px; position:relative; margin:2px 0px;
+	transition: all 0.4s;
+
+	.chevron-container{
+		position:absolute; right:10px; top:50%; transform: translate(-50%, -50%);
+
+		.chevron{
+			font-size: 120%; opacity: 0.8
+		}
+
+		.booked{
+			font-size: 120%; 
+			transition: all 0.4s;
+		}
+		.booked:before {
+		    font-size: 120%;
+		   
+		}
+
+
+
+	}
+
+
+	.statistics{
+		position:absolute; left:50%; top:55%; transform: translate(-50%, -50%);
+		z-index: 1000; opacity:0.8;
+	}
+
+	.day-info{
+		position:absolute; top:10px; left: 10px;    z-index: 1000;
+	}
+
+	.admin-progress{
+		background-color:$mainColorLight; opacity: 0.5;
+	}
+
+	.admin-progress-minimum{
+		background-color:$secondaryColorLight;
+	}
+
+	.admin-progress-maximum{
+		background-color:$mainColorDark; 
+	}
+
+	.closedday-info{
+		position:absolute; bottom:10px; left: 10px;    z-index: 1000;
+		font-size: 90%!important;
+    	font-weight: 800!important;
+	}
+
+	.booking-day-info{
+		position:absolute; bottom:10px; left: 10px;    z-index: 1000;
+		font-size: 90%!important;
+    	font-weight: 400!important;
+	}
+
+
+	
+
+	.availability-info{
+		position:absolute; bottom:10px; left: 10px;    z-index: 1000;
+		font-size: 90%!important;
+    	font-weight: 400!important;
+	}
+
+	.week-selector{
+		margin: 10px 0px;
+	}
+
+	.day-selector{
+		margin: 10px 0px;
+	}
+
+	
+
+}
+
+.admin-closed-day{
+		background-color: #e9ecef!important;
+		
+	}
+
+.admin-day-selector:hover{
+	background-color: $mainColorDark; 
+
+	.booked{
+			color: #fff;
+		}
+
+	.booked:before {
+	    font-size: 160%;
+	   
+	}
+}
+
+.admin-closed-day:hover{
+	.chevron-container{
+		.booked{
+			font-size: 120%; 
+			color: #000;
+			transition: all 0.4s;
+		}
+		.booked:before {
+		    font-size: 120%;
+		}
+	}
+}
