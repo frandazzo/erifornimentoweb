@@ -1,6 +1,7 @@
 ﻿
 using PassepartoutMicroservice.Domain;
 using System;
+using System.Linq;
 
 namespace PassepartoutMicroservice.Passepartout
 {
@@ -60,6 +61,16 @@ namespace PassepartoutMicroservice.Passepartout
 
         }
 
+        bool checkAllCharsAreZero(string codiceSdi)
+        {
+
+            if (codiceSdi.Contains("0") && codiceSdi.Distinct().Count() == 1)
+                return true;
+
+            return false;
+
+
+        }
         public Cliente CreateCliente(Cliente cliente)
         {
 
@@ -79,11 +90,27 @@ namespace PassepartoutMicroservice.Passepartout
             mexalCnn.PCPAE_S = cliente.Nazione;
             mexalCnn.PCLOC_S = cliente.Comune;
             mexalCnn.PCCAP_S = cliente.Cap.ToString();
+
+            if (String.IsNullOrEmpty(cliente.Provincia))
+                cliente.Provincia = "XX";
+
             mexalCnn.PCPRO_S = cliente.Provincia;
             mexalCnn.PCIND_S = cliente.Indirizzo;
             mexalCnn.PCPEC_S = cliente.Pec;
-            mexalCnn.PCCODSDI_S = cliente.CodiceSdi;
 
+            if (!String.IsNullOrEmpty(cliente.CodiceSdi))
+            {
+                //verifico che il codice sdi contenga tutti caratteri uguali a zero
+                bool allCharsAreZero = checkAllCharsAreZero(cliente.CodiceSdi);
+                if (allCharsAreZero)
+                    cliente.CodiceSdi = "";
+
+                if (cliente.CodiceSdi.Length != 7)
+                    cliente.CodiceSdi = "";
+
+            }
+
+            mexalCnn.PCCODSDI_S = cliente.CodiceSdi;
 
             //aggiungo un paio di variabili necessarie
             //la valuta di gestione del cliente
@@ -92,7 +119,7 @@ namespace PassepartoutMicroservice.Passepartout
             mexalCnn.PCLIS = configuration.ListinoCliente;
             //codice pagamneto
             mexalCnn.PCPAG = 1;
-            mexalCnn.PCSERIELE = 2;
+           // mexalCnn.PCSERIELE = 1;
             mexalCnn.PCFATTELE_S = "S";
 
             mexalCnn.PUTPC();
